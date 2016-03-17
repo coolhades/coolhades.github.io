@@ -57,15 +57,15 @@
 
 
 
-<meta name="description">
+<meta name="description" content="；只是开始，没有结束；">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="源始">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:site_name" content="源始">
+<meta property="og:description" content="；只是开始，没有结束；">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:title" content="源始">
+<meta name="twitter:description" content="；只是开始，没有结束；">
 
 
 
@@ -83,7 +83,7 @@
   };
 </script>
 
-  <title> Hexo </title>
+  <title> 源始 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -114,7 +114,7 @@
   <div class="custom-logo-site-title">
     <a href="/"  class="brand" rel="start">
       <span class="logo-line-before"><i></i></span>
-      <span class="site-title">Hexo</span>
+      <span class="site-title">源始</span>
       <span class="logo-line-after"><i></i></span>
     </a>
   </div>
@@ -199,15 +199,346 @@
 
     
     
+
+    
       
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/17/OnClickListener/" itemprop="url">
+                  Android中的点击事件实现原理———“；只是开始，没有结束；”
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-17T00:00:00+08:00" content="2016-03-17">
+              2016-03-17
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
       
-        
-        
-        
       
 
       
+        
+          
+            <h2 id="android点击事件原理："><a href="#android点击事件原理：" class="headerlink" title="android点击事件原理："></a>android点击事件原理：</h2><h3 id="（举例）-Button点击———-执行OnClick（）方法："><a href="#（举例）-Button点击———-执行OnClick（）方法：" class="headerlink" title="（举例） Button点击———>执行OnClick（）方法："></a>（举例） Button点击———>执行OnClick（）方法：</h3><h4 id="针对我们的android系统，首先点击触发的是-Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件："><a href="#针对我们的android系统，首先点击触发的是-Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件：" class="headerlink" title="针对我们的android系统，首先点击触发的是 Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件："></a>针对我们的android系统，首先点击触发的是 Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件：</h4><p>1.点击<br>2.长按<br>3.移动<br>以上事件都是经过：ActionDown  Move  ActionUp，Move可能不执行</p>
+<h4 id="经过判断后触发相应的-“事件方法”，比如OnClickListener接口的OnClick方法，此时就会调用-我们自己实现的OnClick方法"><a href="#经过判断后触发相应的-“事件方法”，比如OnClickListener接口的OnClick方法，此时就会调用-我们自己实现的OnClick方法" class="headerlink" title="经过判断后触发相应的 “事件方法”，比如OnClickListener接口的OnClick方法，此时就会调用 我们自己实现的OnClick方法"></a>经过判断后触发相应的 “事件方法”，比如OnClickListener接口的OnClick方法，此时就会调用 我们自己实现的OnClick方法</h4><h4 id="整个点击（长按、滑动等）事件前提是要注册XXListener-到对应的接口中。"><a href="#整个点击（长按、滑动等）事件前提是要注册XXListener-到对应的接口中。" class="headerlink" title="整个点击（长按、滑动等）事件前提是要注册XXListener 到对应的接口中。"></a>整个点击（长按、滑动等）事件前提是要注册XXListener 到对应的接口中。</h4><h3 id="整个点击事件，涉及到的就是接口复用，个人感觉就是java语言的多态应用。"><a href="#整个点击事件，涉及到的就是接口复用，个人感觉就是java语言的多态应用。" class="headerlink" title="整个点击事件，涉及到的就是接口复用，个人感觉就是java语言的多态应用。"></a>整个点击事件，涉及到的就是接口复用，个人感觉就是java语言的多态应用。</h3><h3 id="其它事件参考按钮点击事件，原理都一样或相似；"><a href="#其它事件参考按钮点击事件，原理都一样或相似；" class="headerlink" title="其它事件参考按钮点击事件，原理都一样或相似；"></a>其它事件参考按钮点击事件，原理都一样或相似；</h3>
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/09/Adapter/" itemprop="url">
+                  Adapter学习使用
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-09T00:00:00+08:00" content="2016-03-09">
+              2016-03-09
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="BaseAdapter"><a href="#BaseAdapter" class="headerlink" title="BaseAdapter"></a>BaseAdapter</h2><p>  — SimpleAdapter<br>  — ArrayAdapter</p>
+<h3 id="ArrayAdapter"><a href="#ArrayAdapter" class="headerlink" title="ArrayAdapter"></a>ArrayAdapter</h3><h4 id="构造函数："><a href="#构造函数：" class="headerlink" title="构造函数："></a>构造函数：</h4><p>//最终调用的构造器，其余构造器省略<br>public ArrayAdapter(Context context, @LayoutRes int resource, @IdRes int textViewResourceId,<br>@NonNull List\<t\> objects) {<br>mContext = context;<br>mInflater = LayoutInflater.from(context);<br>mResource = mDropDownResource = resource;//Layout资源<br>mObjects = objects;//资料List<br>mFieldId = textViewResourceId;//TextView的Id（TextView为根节点是设置为0即可）<br>} </t\></p>
+<h4 id="其它介绍："><a href="#其它介绍：" class="headerlink" title="其它介绍："></a>其它介绍：</h4><h5 id="只是将数据源经过toString方法转化为String-显示到ListView上。"><a href="#只是将数据源经过toString方法转化为String-显示到ListView上。" class="headerlink" title="只是将数据源经过toString方法转化为String 显示到ListView上。"></a>只是将数据源经过toString方法转化为String 显示到ListView上。</h5><h5 id="重写了getCount、getItem、getItemId、getView、getDropDownView"><a href="#重写了getCount、getItem、getItemId、getView、getDropDownView" class="headerlink" title="重写了getCount、getItem、getItemId、getView、getDropDownView"></a>重写了getCount、getItem、getItemId、getView、getDropDownView</h5><h5 id="增加了add、addAll、insert、remove、clear等方法并在数据更新后会自动调用notifyDataSetChanged（）方法。"><a href="#增加了add、addAll、insert、remove、clear等方法并在数据更新后会自动调用notifyDataSetChanged（）方法。" class="headerlink" title="增加了add、addAll、insert、remove、clear等方法并在数据更新后会自动调用notifyDataSetChanged（）方法。"></a>增加了add、addAll、insert、remove、clear等方法并在数据更新后会自动调用notifyDataSetChanged（）方法。</h5>
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/03/01/新项目源码阅读日志-1/" itemprop="url">
+                  微信表情大全源码日志-1
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-03-01T14:46:31+08:00" content="2016-03-01">
+              2016-03-01
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="微信表情源码日志—项目框架"><a href="#微信表情源码日志—项目框架" class="headerlink" title="微信表情源码日志—项目框架"></a><em>微信表情源码日志—项目框架</em></h2><p>先阅读下Manifest 找到MainActivity为HomeView<br>\<activity android:name=".HomeView" android:label="@string/app_name" android:hardwareaccelerated="true" android:launchmode="singleTop"><br>    <intent-filter><br>        <action android:name="android.intent.action.MAIN"><br>        <category android:name="android.intent.category.LAUNCHER"><br>    </category></action></intent-filter><br>接下来定位到HomeView，发现HomeView 继承于HomeViewBase，第一反应就是复用了相同的内容，这就是java类继承的使用。<br>定位到HomeViewBase 发现是继承于_FragmentActivity_<br>public abstract class HomeViewBase extends FragmentActivity implements IRunningState<br>Google下这个类，是一个兼容包里的Activity，主要是为了在低版本android上（Level 11 以下）Activity可以操作Fragment， 其功能和3.0以上的Activity一样。 </activity></p>
+<h2 id="3月3日-目标-观察者模式和Intentfilter结合启动程序"><a href="#3月3日-目标-观察者模式和Intentfilter结合启动程序" class="headerlink" title="3月3日 目标 观察者模式和Intentfilter结合启动程序"></a>3月3日 目标 观察者模式和Intentfilter结合启动程序</h2><p>实际分析源码结果:<br>1.通过Timer定时器 定时获取当前栈顶包名来判断用户是否运行了 “特定”的Activity 来进行悬浮窗的创建和移除<br>   BUG：android的碎片和开放 部分第三方Rom修改了底层API，获取包名会失败<br>2.悬浮窗启动后 悬浮主页是通过TouchEvent 中 根据主页包名并setComponent启动Activity<br>3.悬浮主页的Layout文档根据主页面进行了微调。<br>—- -结论：观察者模式和IntentFilter有另外用途，与启动无关</p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/24/New-Target/" itemprop="url">
+                  New Target
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-02-24T14:46:31+08:00" content="2016-02-24">
+              2016-02-24
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>MVP模式：<br>Presenter ：<br>考虑一下两个方案:<br>1.在 定义的条件 下开启线程<br>2.UI线程启动时就 开启子线程 -  X<br>最后关闭线程的时机考虑：<br>1.完成任务就关闭       -节省资源<br>2.直到UI线程销毁时关闭  -oom   X</p>
+<p>【关于UI线程与子线程通信：<br>1.通过Presenter获取UI线程的Handler（该Handler绑定了UI线程的Loop，只处理UI线程的消息），然后子线程执行完后通过UI线程的Handler发送”消息（UI所需数据）“，UI线程更新UI<br>2.传递子线程的Handler（Handler绑定了子线程的Loop）给UI，UI线程在特定条件下触发（比如点击了按钮）【发送“特定消息“】给子线程，子线程执行耗时操作】</p>
+<p>3.悬浮窗<br>  Setting —> 打开悬浮球 —> Service启动 -> 创建悬浮球 -> 点击事件 -><br>创建tabfloatWindow 和 floatFragment </p>
+
+          
+        
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
 
     
       
@@ -411,12 +742,12 @@
                src="/images/default_avatar.jpg"
                alt="Hades dong" />
           <p class="site-author-name" itemprop="name">Hades dong</p>
-          <p class="site-description motion-element" itemprop="description"></p>
+          <p class="site-description motion-element" itemprop="description">；只是开始，没有结束；</p>
         </div>
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">1</span>
+              <span class="site-state-item-count">5</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>

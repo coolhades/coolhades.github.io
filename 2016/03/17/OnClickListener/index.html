@@ -57,34 +57,19 @@
 
 
 
-<meta name="description" content="Android技能学习轨迹：入门在入门阶段你要掌握的技术：1.Java程序设计基础技术要点（这是编程语言基础-必须滴）：常量与变量、数据类型　、运算符、表达式与语句、程序控制结构、数组类和对象、类的封装、继承与多态、异常处理、多线程
-2.Android嵌入式系统程序开发技术技术要点（个人感觉不是全部必须掌握）：
-
-Android的体系结构
-Android应用程序组成
-Android应用程序开发
-A">
+<meta name="description" content="android点击事件原理：执行OnClick（）方法：&quot;&amp;gt;（举例） Button点击———&amp;gt;执行OnClick（）方法：针对我们的android系统，首先点击触发的是 Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件：1.点击2.长按3.移动以上事件都是经过：ActionDown  Move  ActionUp，Move可能不执行
+经过判断后触发相应的 “事件方法”，比如OnC">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安卓学习路线">
-<meta property="og:url" content="http://yoursite.com/2016/02/18/LearnAndroid/index.html">
+<meta property="og:title" content="Android中的点击事件实现原理———“；只是开始，没有结束；”">
+<meta property="og:url" content="http://yoursite.com/2016/03/17/OnClickListener/index.html">
 <meta property="og:site_name" content="源始">
-<meta property="og:description" content="Android技能学习轨迹：入门在入门阶段你要掌握的技术：1.Java程序设计基础技术要点（这是编程语言基础-必须滴）：常量与变量、数据类型　、运算符、表达式与语句、程序控制结构、数组类和对象、类的封装、继承与多态、异常处理、多线程
-2.Android嵌入式系统程序开发技术技术要点（个人感觉不是全部必须掌握）：
-
-Android的体系结构
-Android应用程序组成
-Android应用程序开发
-A">
-<meta property="og:updated_time" content="2016-02-19T01:04:36.000Z">
+<meta property="og:description" content="android点击事件原理：执行OnClick（）方法：&quot;&amp;gt;（举例） Button点击———&amp;gt;执行OnClick（）方法：针对我们的android系统，首先点击触发的是 Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件：1.点击2.长按3.移动以上事件都是经过：ActionDown  Move  ActionUp，Move可能不执行
+经过判断后触发相应的 “事件方法”，比如OnC">
+<meta property="og:updated_time" content="2016-03-17T06:54:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安卓学习路线">
-<meta name="twitter:description" content="Android技能学习轨迹：入门在入门阶段你要掌握的技术：1.Java程序设计基础技术要点（这是编程语言基础-必须滴）：常量与变量、数据类型　、运算符、表达式与语句、程序控制结构、数组类和对象、类的封装、继承与多态、异常处理、多线程
-2.Android嵌入式系统程序开发技术技术要点（个人感觉不是全部必须掌握）：
-
-Android的体系结构
-Android应用程序组成
-Android应用程序开发
-A">
+<meta name="twitter:title" content="Android中的点击事件实现原理———“；只是开始，没有结束；”">
+<meta name="twitter:description" content="android点击事件原理：执行OnClick（）方法：&quot;&amp;gt;（举例） Button点击———&amp;gt;执行OnClick（）方法：针对我们的android系统，首先点击触发的是 Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件：1.点击2.长按3.移动以上事件都是经过：ActionDown  Move  ActionUp，Move可能不执行
+经过判断后触发相应的 “事件方法”，比如OnC">
 
 
 
@@ -102,7 +87,7 @@ A">
   };
 </script>
 
-  <title> 安卓学习路线 | 源始 </title>
+  <title> Android中的点击事件实现原理———“；只是开始，没有结束；” | 源始 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -232,7 +217,7 @@ A">
             
             
               
-                安卓学习路线
+                Android中的点击事件实现原理———“；只是开始，没有结束；”
               
             
           </h1>
@@ -244,8 +229,8 @@ A">
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-02-18T15:35:54+08:00" content="2016-02-18">
-              2016-02-18
+            <time itemprop="dateCreated" datetime="2016-03-17T00:00:00+08:00" content="2016-03-17">
+              2016-03-17
             </time>
           </span>
 
@@ -270,88 +255,8 @@ A">
       
 
       
-        <h2 id="Android技能学习轨迹："><a href="#Android技能学习轨迹：" class="headerlink" title="Android技能学习轨迹："></a>Android技能学习轨迹：</h2><h2 id="入门"><a href="#入门" class="headerlink" title="入门"></a>入门</h2><h3 id="在入门阶段你要掌握的技术："><a href="#在入门阶段你要掌握的技术：" class="headerlink" title="在入门阶段你要掌握的技术："></a>在入门阶段你要掌握的技术：</h3><h4 id="1-Java程序设计基础"><a href="#1-Java程序设计基础" class="headerlink" title="1.Java程序设计基础"></a>1.Java程序设计基础</h4><p>技术要点（这是编程语言基础-必须滴）：<br>常量与变量、数据类型　、运算符、表达式与语句、程序控制结构、数组<br>类和对象、类的封装、继承与多态、异常处理、多线程</p>
-<h4 id="2-Android嵌入式系统程序开发技术"><a href="#2-Android嵌入式系统程序开发技术" class="headerlink" title="2.Android嵌入式系统程序开发技术"></a>2.Android嵌入式系统程序开发技术</h4><p>技术要点（个人感觉不是全部必须掌握）：</p>
-<ul>
-<li>Android的体系结构</li>
-<li>Android应用程序组成</li>
-<li>Android应用程序开发</li>
-<li>Android系统移植</li>
-<li>S5PV210硬件结构</li>
-<li>接口驱动程序开发</li>
-<li>Android嵌入式组态软件</li>
-<li>GPS与Google Map定位系统</li>
-</ul>
-<h4 id="3-Android-SDK软件开发工具包"><a href="#3-Android-SDK软件开发工具包" class="headerlink" title="3. Android SDK软件开发工具包"></a>3. Android SDK软件开发工具包</h4><ul>
-<li>技术要点（这是android基础）：</li>
-<li>android使用的面向对象语法</li>
-<li>活动与布局配置</li>
-<li>创建android 使用界面</li>
-<li>资源管理与对话框</li>
-<li>偏好设置界面与菜单</li>
-<li>意图启动活动与内置应用程序</li>
-<li>存储偏好设置、文件与数据库</li>
-<li>内容提供者、适配器与列表组件</li>
-<li>广播接收器、服务与信息提示</li>
-</ul>
-<h4 id="4-Web-GIS开发"><a href="#4-Web-GIS开发" class="headerlink" title="4. Web GIS开发"></a>4. Web GIS开发</h4><p>技术要点（这部分不是很懂）：<br>地理信息系统的发展与Web服务<br>ArcGIS Server管理与服务发布<br>简单Web GIS应用开发<br>数据源、资源与功能对象<br>自定义数据源<br>扩展ArcGIS服务器<br>GIS Web服务的应用与创建<br>安全、部署与性能调优</p>
-<h4 id="5-JavaScript脚本基础"><a href="#5-JavaScript脚本基础" class="headerlink" title="5. JavaScript脚本基础"></a>5. JavaScript脚本基础</h4><p>技术要点：</p>
-<p>JavaScript的环境要求<br>JavaScript基本语法<br>流程控制<br>函数<br>对象与数组<br>程序调试与错误处理<br>事件处理<br>处理文档对象<br>文档对象模型<br>window窗口对象</p>
-<h4 id="6-HTML5开发技能"><a href="#6-HTML5开发技能" class="headerlink" title="6. HTML5开发技能"></a>6. HTML5开发技能</h4><p>技术要点：</p>
-<p>HTML5基础语法<br>新增的input输入类型<br>新增的form元素<br>HTML5画布<br>HTML5音频与视频<br>HTML5多媒体技术<br>Web存储<br>WebSQL混合开发<br>Workers多线程处理</p>
-<h2 id="晋升"><a href="#晋升" class="headerlink" title="晋升"></a>晋升</h2><p>你要掌握的技术：</p>
-<ol>
-<li>常用混合移动开发框架<br>技术要点：</li>
-</ol>
-<p>AppCan<br>Adobe Air<br>RubyMotion<br>Appcelerator<br>Xamarin</p>
-<ol>
-<li>界面交互式系统设计<br>技术要点：</li>
-</ol>
-<p>模式、用户偏好设置<br>界面的定量分析<br>统一性和元动作<br>导航和人本界面<br>界面设计的规范和管理</p>
-<ol>
-<li>常用团队协作开发工具<br>技术要点：</li>
-</ol>
-<p>SVN工具<br>Git工具<br>微软Team Foundation Server<br>Hg/Mercurial工具<br>文件比较工具</p>
-<ol>
-<li>Android底层开发技术<br>技术要点：</li>
-</ol>
-<p>Android源代码<br>Android构建 Linux的操作系统<br>HAL层分析<br>Goldfish下的驱动解析<br>MSM内核和驱动<br>OMAP内核和驱动解析<br>显示系统驱动应用<br>输入系统驱动应用<br>音频系统驱动<br>视频输出系统驱动</p>
-<h2 id="高级"><a href="#高级" class="headerlink" title="高级"></a>高级</h2><p>技能要点：</p>
-<ol>
-<li>Android 软件安全分析技术<br>技术要点：</li>
-</ol>
-<p>Android程序分析环境搭建<br>分析Android程序<br>Android Dalvik虚拟机知识<br>Android可执行文件<br>静态分析Android程序<br>Android的ARM汇编语言基础–逆向原生<br>Android NDK程序逆向分析<br>动态调试Android程序<br>Android软件的破解技术<br>Android程序的反破解技术<br>Android系统攻击与防范<br>DroidKongFu变种病毒</p>
-<ol>
-<li>编译原理<br>技术要点：</li>
-</ol>
-<p>编译器的结构<br>语法<br>词法分析<br>语法分析<br>语法制导的翻译<br>中间代码生成<br>运行时刻环境<br>代码生成<br>机器无关优化<br>指令级并行<br>并行性和局部性的优化<br>过程间分析</p>
-<ol>
-<li>设计模式<br>技术要点：</li>
-</ol>
-<p>简单工厂模式<br>抽象工厂模式<br>策略模式<br>装饰模式<br>代理模式<br>工厂方法模式<br>原型模式<br>模板方法模式<br>外观模式<br>建造者模式<br>观察者模式<br>状态模式<br>适配器模式<br>备忘录模式<br>组合模式<br>迭代器模式<br>单例模式<br>桥接模式<br>命令模式<br>职责链模式<br>中介者模式<br>享元模式<br>解释器模式<br>访问者模式</p>
-<ol>
-<li>数据结构<br>技术要点：</li>
-</ol>
-<p>算法分析<br>树<br>散列<br>优先队列<br>排序<br>不相交集ADT<br>算法设计技巧<br>摊还分析<br>高级数据库结构及实现</p>
-<p>准备开始有计划、分步骤的学习这14个技术吧， 你应该自信地和坚定的走下去。<br>并且记住,图书是学习路上最好的旅伴（暂时忘记翠姑吧）</p>
-<p>图书：</p>
-<ol>
-<li>疯狂Java讲义(第2版)</li>
-<li>Android嵌入式系统程序开发（基于Cortex-A8）</li>
-<li>Android SDK程序设计与开发范例</li>
-<li>Web GIS开发——ArcGIS Server与.NET</li>
-<li>JavaScript权威指南（第6版）</li>
-<li>HTML5与CSS3基础教程（第7版）</li>
-<li>Android移动应用开发——基于Adobe AIR</li>
-<li>About Face3交互设计精髓</li>
-<li>Git权威指南</li>
-<li>疯狂Android讲义（第2版）</li>
-<li>Android 软件安全与逆向分析</li>
-<li>编译原理（第2版）</li>
-<li>编程珠玑（第2版）</li>
-<li>数据结构与算法分析：C语言描述（原书第2版）</li>
-</ol>
-
+        <h2 id="android点击事件原理："><a href="#android点击事件原理：" class="headerlink" title="android点击事件原理："></a>android点击事件原理：</h2><h3 id="（举例）-Button点击———-执行OnClick（）方法："><a href="#（举例）-Button点击———-执行OnClick（）方法：" class="headerlink" title="（举例） Button点击———>执行OnClick（）方法："></a>（举例） Button点击———>执行OnClick（）方法：</h3><h4 id="针对我们的android系统，首先点击触发的是-Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件："><a href="#针对我们的android系统，首先点击触发的是-Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件：" class="headerlink" title="针对我们的android系统，首先点击触发的是 Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件："></a>针对我们的android系统，首先点击触发的是 Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件：</h4><p>1.点击<br>2.长按<br>3.移动<br>以上事件都是经过：ActionDown  Move  ActionUp，Move可能不执行</p>
+<h4 id="经过判断后触发相应的-“事件方法”，比如OnClickListener接口的OnClick方法，此时就会调用-我们自己实现的OnClick方法"><a href="#经过判断后触发相应的-“事件方法”，比如OnClickListener接口的OnClick方法，此时就会调用-我们自己实现的OnClick方法" class="headerlink" title="经过判断后触发相应的 “事件方法”，比如OnClickListener接口的OnClick方法，此时就会调用 我们自己实现的OnClick方法"></a>经过判断后触发相应的 “事件方法”，比如OnClickListener接口的OnClick方法，此时就会调用 我们自己实现的OnClick方法</h4><h4 id="整个点击（长按、滑动等）事件前提是要注册XXListener-到对应的接口中。"><a href="#整个点击（长按、滑动等）事件前提是要注册XXListener-到对应的接口中。" class="headerlink" title="整个点击（长按、滑动等）事件前提是要注册XXListener 到对应的接口中。"></a>整个点击（长按、滑动等）事件前提是要注册XXListener 到对应的接口中。</h4><h3 id="整个点击事件，涉及到的就是接口复用，个人感觉就是java语言的多态应用。"><a href="#整个点击事件，涉及到的就是接口复用，个人感觉就是java语言的多态应用。" class="headerlink" title="整个点击事件，涉及到的就是接口复用，个人感觉就是java语言的多态应用。"></a>整个点击事件，涉及到的就是接口复用，个人感觉就是java语言的多态应用。</h3><h3 id="其它事件参考按钮点击事件，原理都一样或相似；"><a href="#其它事件参考按钮点击事件，原理都一样或相似；" class="headerlink" title="其它事件参考按钮点击事件，原理都一样或相似；"></a>其它事件参考按钮点击事件，原理都一样或相似；</h3>
       
     </div>
 
@@ -362,13 +267,13 @@ A">
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2016/03/09/Adapter/" rel="next" title="Adapter学习使用">
+                <i class="fa fa-chevron-left"></i> Adapter学习使用
+              </a>
+            
           </div>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2016/02/24/New-Target/" rel="prev" title="New Target">
-                New Target <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -472,7 +377,7 @@ A">
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Android技能学习轨迹："><span class="nav-number">1.</span> <span class="nav-text">Android技能学习轨迹：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#入门"><span class="nav-number">2.</span> <span class="nav-text">入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#在入门阶段你要掌握的技术："><span class="nav-number">2.1.</span> <span class="nav-text">在入门阶段你要掌握的技术：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-Java程序设计基础"><span class="nav-number">2.1.1.</span> <span class="nav-text">1.Java程序设计基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-Android嵌入式系统程序开发技术"><span class="nav-number">2.1.2.</span> <span class="nav-text">2.Android嵌入式系统程序开发技术</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-Android-SDK软件开发工具包"><span class="nav-number">2.1.3.</span> <span class="nav-text">3. Android SDK软件开发工具包</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-Web-GIS开发"><span class="nav-number">2.1.4.</span> <span class="nav-text">4. Web GIS开发</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-JavaScript脚本基础"><span class="nav-number">2.1.5.</span> <span class="nav-text">5. JavaScript脚本基础</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-HTML5开发技能"><span class="nav-number">2.1.6.</span> <span class="nav-text">6. HTML5开发技能</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#晋升"><span class="nav-number">3.</span> <span class="nav-text">晋升</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高级"><span class="nav-number">4.</span> <span class="nav-text">高级</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#android点击事件原理："><span class="nav-number">1.</span> <span class="nav-text">android点击事件原理：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#（举例）-Button点击———-执行OnClick（）方法："><span class="nav-number">1.1.</span> <span class="nav-text">（举例） Button点击———>执行OnClick（）方法：</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#针对我们的android系统，首先点击触发的是-Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件："><span class="nav-number">1.1.1.</span> <span class="nav-text">针对我们的android系统，首先点击触发的是 Touch（触摸）相关的事件，随后经过逻辑判断用户的Touch事件：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#经过判断后触发相应的-“事件方法”，比如OnClickListener接口的OnClick方法，此时就会调用-我们自己实现的OnClick方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">经过判断后触发相应的 “事件方法”，比如OnClickListener接口的OnClick方法，此时就会调用 我们自己实现的OnClick方法</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整个点击（长按、滑动等）事件前提是要注册XXListener-到对应的接口中。"><span class="nav-number">1.1.3.</span> <span class="nav-text">整个点击（长按、滑动等）事件前提是要注册XXListener 到对应的接口中。</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#整个点击事件，涉及到的就是接口复用，个人感觉就是java语言的多态应用。"><span class="nav-number">1.2.</span> <span class="nav-text">整个点击事件，涉及到的就是接口复用，个人感觉就是java语言的多态应用。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#其它事件参考按钮点击事件，原理都一样或相似；"><span class="nav-number">1.3.</span> <span class="nav-text">其它事件参考按钮点击事件，原理都一样或相似；</span></a></li></ol></li></ol></div>
             
           </div>
           <div class="post-toc-indicator-bottom post-toc-indicator">

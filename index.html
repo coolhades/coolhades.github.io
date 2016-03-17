@@ -223,7 +223,7 @@
               
                 
                 <a class="post-title-link" href="/2016/03/17/OnClickListener/" itemprop="url">
-                  Android中的点击事件实现原理———“；只是开始，没有结束；”
+                  Android中的点击事件实现原理———只是开始，没有结束;
                 </a>
               
             
@@ -433,8 +433,9 @@
       
         
           
-            <h2 id="微信表情源码日志—项目框架"><a href="#微信表情源码日志—项目框架" class="headerlink" title="微信表情源码日志—项目框架"></a><em>微信表情源码日志—项目框架</em></h2><p>先阅读下Manifest 找到MainActivity为HomeView<br>\<activity android:name=".HomeView" android:label="@string/app_name" android:hardwareaccelerated="true" android:launchmode="singleTop"><br>    <intent-filter><br>        <action android:name="android.intent.action.MAIN"><br>        <category android:name="android.intent.category.LAUNCHER"><br>    </category></action></intent-filter><br>接下来定位到HomeView，发现HomeView 继承于HomeViewBase，第一反应就是复用了相同的内容，这就是java类继承的使用。<br>定位到HomeViewBase 发现是继承于_FragmentActivity_<br>public abstract class HomeViewBase extends FragmentActivity implements IRunningState<br>Google下这个类，是一个兼容包里的Activity，主要是为了在低版本android上（Level 11 以下）Activity可以操作Fragment， 其功能和3.0以上的Activity一样。 </activity></p>
-<h2 id="3月3日-目标-观察者模式和Intentfilter结合启动程序"><a href="#3月3日-目标-观察者模式和Intentfilter结合启动程序" class="headerlink" title="3月3日 目标 观察者模式和Intentfilter结合启动程序"></a>3月3日 目标 观察者模式和Intentfilter结合启动程序</h2><p>实际分析源码结果:<br>1.通过Timer定时器 定时获取当前栈顶包名来判断用户是否运行了 “特定”的Activity 来进行悬浮窗的创建和移除<br>   BUG：android的碎片和开放 部分第三方Rom修改了底层API，获取包名会失败<br>2.悬浮窗启动后 悬浮主页是通过TouchEvent 中 根据主页包名并setComponent启动Activity<br>3.悬浮主页的Layout文档根据主页面进行了微调。<br>—- -结论：观察者模式和IntentFilter有另外用途，与启动无关</p>
+            <h2 id="微信表情源码日志—项目框架"><a href="#微信表情源码日志—项目框架" class="headerlink" title="微信表情源码日志—项目框架"></a><em>微信表情源码日志—项目框架</em></h2><p>先阅读下Manifest 找到MainActivity为HomeView</p>
+<p><activity android:name=".HomeView" android:label="@string/appname" android:hardwareaccelerated="true" android:launchmode="singleTop"><br> <intent-filter><br> <action android:name="android.intent.action.MAIN"><br> <category android:name="android.intent.category.LAUNCHER"><br> </category></action></intent-filter><br>接下来定位到HomeView，发现HomeView 继承于HomeViewBase，第一反应就是复用了相同的内容，这就是java类继承的使用。<br>定位到HomeViewBase 发现是继承于_FragmentActivity_<br> public abstract class HomeViewBase extends FragmentActivity implements IRunningState<br>Google下这个类，是一个兼容包里的Activity，主要是为了在低版本android上（Level 11 以下）Activity可以操作Fragment， 其功能和3.0以上的Activity一样。 </activity></p>
+<h2 id="3月3日-目标-观察者模式和Intentfilter结合启动程序"><a href="#3月3日-目标-观察者模式和Intentfilter结合启动程序" class="headerlink" title="3月3日 目标 观察者模式和Intentfilter结合启动程序"></a>3月3日 目标 观察者模式和Intentfilter结合启动程序</h2><p>实际分析源码结果:<br>1.通过Timer定时器 定时获取当前栈顶包名来判断用户是否运行了 “特定”的Activity 来进行悬浮窗的创建和移除<br>   BUG：android的碎片和开放 部分第三方Rom修改了底层API，获取包名会失败<br>2.悬浮窗启动后 悬浮主页是通过TouchEvent 中 根据主页包名并setComponent启动Activity<br>3.悬浮主页的Layout文档根据主页面进行了微调。<br>-结论：观察者模式和IntentFilter有另外用途，与启动无关</p>
 
           
         
